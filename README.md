@@ -1,9 +1,9 @@
-Super Mario Bros Level 1
+Super Mario Bros Level 1 - Fantasy
 =============
 
 An attempt to recreate the first level of Super Mario Bros.
 
-![screenshot](https://raw.github.com/justinmeister/Mario-Level-1/master/screenshot.png)
+![screenshot](screenshot.png)
 
 CONTROLS: 
 
@@ -26,8 +26,6 @@ To install dependencies for Python 2.x:
 
 VIDEO DEMO:
 
-http://www.youtube.com/watch?v=HBbzYKMfx5Y
-   
-DISCLAIMER:
+https://www.aparat.com/v/4ENI8
 
-This project is intended for non-commercial educational purposes.
+By Peyman Majidi
