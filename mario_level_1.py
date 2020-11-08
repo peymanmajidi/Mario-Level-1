@@ -13,6 +13,8 @@ import cProfile
 
 
 if __name__=='__main__':
+    programIcon = pg.image.load('ikon.png')
+    pg.display.set_icon(programIcon)
     main()
     pg.quit()
     sys.exit()

@@ -158,10 +158,15 @@ class Level1(tools._State):
         self.powerup_group = pg.sprite.Group()
         self.brick_pieces_group = pg.sprite.Group()
 
+        brick = 43
+
         brick1  = bricks.Brick(858,  365)
-        brick2  = bricks.Brick(944,  365)
-        brick3  = bricks.Brick(1030, 365)
-        brick4  = bricks.Brick(3299, 365)
+        brick2  = bricks.Brick(901 + brick*8, 365)
+        brick3  = bricks.Brick(901 + brick*9, 365)
+        brick90  = bricks.Brick(901 + brick*10, 365)
+        brick91  = bricks.Brick(901 + brick*11, 365)
+        brick92  = bricks.Brick(901 + brick*12, 365)
+        # brick4  = bricks.Brick(3299, 365)
         brick5  = bricks.Brick(3385, 365)
         brick6  = bricks.Brick(3430, 193)
         brick7  = bricks.Brick(3473, 193)
@@ -191,7 +196,9 @@ class Level1(tools._State):
         brick31 = bricks.Brick(7331, 365)
 
         self.brick_group = pg.sprite.Group(brick1,  brick2,
-                                           brick3,  brick4,
+                                            brick3,  
+                                             brick90, brick91,
+                                        #    brick4,
                                            brick5,  brick6,
                                            brick7,  brick8,
                                            brick9,  brick10,
@@ -205,16 +212,33 @@ class Level1(tools._State):
                                            brick25, brick26,
                                            brick27, brick28,
                                            brick29, brick30,
-                                           brick31)
+                                           brick31
+                                           #, brick32, brick33, brick34, brick35, brick36 
+                                           )
 
 
     def setup_coin_boxes(self):
         """Creates all the coin boxes and puts them in a sprite group"""
+        brick = 43
         coin_box1  = coin_box.Coin_box(685, 365, c.COIN, self.coin_group)
-        coin_box2  = coin_box.Coin_box(901, 365, c.MUSHROOM, self.powerup_group)
-        coin_box3  = coin_box.Coin_box(987, 365, c.COIN, self.coin_group)
-        coin_box4  = coin_box.Coin_box(943, 193, c.COIN, self.coin_group)
+        coin_box2  = coin_box.Coin_box(901, 365, c.LIFE_MUSHROOM, self.powerup_group)
+        coin_box20  = coin_box.Coin_box(901 + brick, 365, c.MUSHROOM, self.powerup_group)
+        coin_box21  = coin_box.Coin_box(901 + brick*2, 365, c.MUSHROOM, self.powerup_group)
+        coin_box22  = coin_box.Coin_box(901 + brick*3, 365, c.LIFE_MUSHROOM, self.powerup_group)
+        coin_box23  = coin_box.Coin_box(901 + brick*4, 365, c.MUSHROOM, self.powerup_group)
+        coin_box24  = coin_box.Coin_box(901 + brick*5, 365, c.LIFE_MUSHROOM, self.powerup_group)
+        coin_box25  = coin_box.Coin_box(901 + brick*6, 365, c.MUSHROOM, self.powerup_group)
+        coin_box26  = coin_box.Coin_box(901 + brick*7, 365, c.LIFE_MUSHROOM, self.powerup_group)
+
+
+        coin_box4  = coin_box.Coin_box(943, 193, c.MUSHROOM, self.powerup_group)
         coin_box5  = coin_box.Coin_box(3342, 365, c.MUSHROOM, self.powerup_group)
+        coin_box50  = coin_box.Coin_box(3342- brick, 365, c.MUSHROOM, self.powerup_group)
+        coin_box51  = coin_box.Coin_box(3342- brick*2, 365, c.MUSHROOM, self.powerup_group)
+        coin_box52  = coin_box.Coin_box(3342- brick*3, 365, c.MUSHROOM, self.powerup_group)
+        coin_box53  = coin_box.Coin_box(3342- brick*4, 365, c.MUSHROOM, self.powerup_group)
+        coin_box54  = coin_box.Coin_box(3342- brick*5, 365, c.MUSHROOM, self.powerup_group)
+
         coin_box6  = coin_box.Coin_box(4030, 193, c.COIN, self.coin_group)
         coin_box7  = coin_box.Coin_box(4544, 365, c.COIN, self.coin_group)
         coin_box8  = coin_box.Coin_box(4672, 365, c.COIN, self.coin_group)
@@ -224,11 +248,16 @@ class Level1(tools._State):
         coin_box12 = coin_box.Coin_box(7288, 365, c.COIN, self.coin_group)
 
         self.coin_box_group = pg.sprite.Group(coin_box1,  coin_box2,
-                                              coin_box3,  coin_box4,
+                                                coin_box4,
                                               coin_box5,  coin_box6,
                                               coin_box7,  coin_box8,
                                               coin_box9,  coin_box10,
-                                              coin_box11, coin_box12)
+                                              coin_box11, coin_box12, 
+                                        
+                                            coin_box50,coin_box51,coin_box52,coin_box53,coin_box54,
+                                         
+                                           coin_box20, coin_box21, coin_box22, coin_box23, coin_box24, coin_box25, coin_box26
+                                              )
 
 
     def setup_flag_pole(self):
