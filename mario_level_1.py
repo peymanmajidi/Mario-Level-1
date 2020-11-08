@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-__author__ = 'justinarmstrong'
+__author__ = 'Peyman Majidi'
 
 """
 This is an attempt to recreate the first level of
@@ -13,6 +13,8 @@ import cProfile
 
 
 if __name__=='__main__':
+    programIcon = pg.image.load('ikon.png')
+    pg.display.set_icon(programIcon)
     main()
     pg.quit()
     sys.exit()

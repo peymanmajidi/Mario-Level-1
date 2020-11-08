@@ -88,7 +88,7 @@ class Level1(tools._State):
         """Create collideable rects for all the pipes"""
 
         pipe1 = collider.Collider(1202, 452, 83, 82)
-        pipe2 = collider.Collider(1631, 409, 83, 140)
+        pipe2 = collider.Collider(1331 + 83, 409, 320, 140)
         pipe3 = collider.Collider(1973, 366, 83, 170)
         pipe4 = collider.Collider(2445, 366, 83, 170)
         pipe5 = collider.Collider(6989, 452, 83, 82)
