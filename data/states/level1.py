@@ -160,6 +160,10 @@ class Level1(tools._State):
 
         brick = 43
 
+        mybrick = bricks.Brick(90,  365)
+
+
+
         brick1  = bricks.Brick(858,  365)
         brick2  = bricks.Brick(901 + brick*8, 365)
         brick3  = bricks.Brick(901 + brick*9, 365)
@@ -197,8 +201,7 @@ class Level1(tools._State):
 
         self.brick_group = pg.sprite.Group(brick1,  brick2,
                                             brick3,  
-                                             brick90, brick91,
-                                        #    brick4,
+                                             brick90, brick91, 
                                            brick5,  brick6,
                                            brick7,  brick8,
                                            brick9,  brick10,
@@ -212,7 +215,8 @@ class Level1(tools._State):
                                            brick25, brick26,
                                            brick27, brick28,
                                            brick29, brick30,
-                                           brick31
+                                           brick31,
+                                           mybrick
                                            #, brick32, brick33, brick34, brick35, brick36 
                                            )
 
@@ -220,6 +224,11 @@ class Level1(tools._State):
     def setup_coin_boxes(self):
         """Creates all the coin boxes and puts them in a sprite group"""
         brick = 43
+
+        my_coin = coin_box.Coin_box(90, 365, c.MUSHROOM, self.powerup_group)
+
+
+
         coin_box1  = coin_box.Coin_box(685, 365, c.COIN, self.coin_group)
         coin_box2  = coin_box.Coin_box(901, 365, c.LIFE_MUSHROOM, self.powerup_group)
         coin_box20  = coin_box.Coin_box(901 + brick, 365, c.MUSHROOM, self.powerup_group)
@@ -253,6 +262,7 @@ class Level1(tools._State):
                                               coin_box7,  coin_box8,
                                               coin_box9,  coin_box10,
                                               coin_box11, coin_box12, 
+                                         
                                         
                                             coin_box50,coin_box51,coin_box52,coin_box53,coin_box54,
                                          

@@ -27,5 +27,3 @@ To install dependencies for Python 2.x:
 VIDEO DEMO:
 
 https://www.aparat.com/v/4ENI8
-
-By Peyman Majidi
